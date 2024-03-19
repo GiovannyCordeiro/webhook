@@ -2,9 +2,11 @@ GEM
   specs:
     base64 (0.2.0)
     domain_name (0.6.20240107)
+    http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     mime-types (2.99.3)
+    mime-types-data (3.2024.0305)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     netrc (0.11.0)
@@ -17,10 +19,11 @@ GEM
       rack (>= 3.0.0, < 4)
     rack-session (2.0.0)
       rack (>= 3.0.0)
-    rest-client (1.8.0)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 3.0)
-      netrc (~> 0.7)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     ruby2_keywords (0.0.5)
     sinatra (4.0.0)
       mustermann (~> 3.0)
@@ -35,8 +38,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  mime-types-data (~> 3.2022, >= 3.2022.0105)
   puma
-  rest-client (~> 1.8)
+  rest-client (~> 2.1)
   sinatra
 
 BUNDLED WITH
