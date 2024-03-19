@@ -1,8 +1,13 @@
 GEM
   specs:
     base64 (0.2.0)
+    domain_name (0.6.20240107)
+    http-cookie (1.0.5)
+      domain_name (~> 0.5)
+    mime-types (2.99.3)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
+    netrc (0.11.0)
     nio4r (2.7.0)
     puma (6.4.2)
       nio4r (~> 2.0)
@@ -12,6 +17,10 @@ GEM
       rack (>= 3.0.0, < 4)
     rack-session (2.0.0)
       rack (>= 3.0.0)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     ruby2_keywords (0.0.5)
     sinatra (4.0.0)
       mustermann (~> 3.0)
@@ -27,6 +36,7 @@ PLATFORMS
 
 DEPENDENCIES
   puma
+  rest-client (~> 1.8)
   sinatra
 
 BUNDLED WITH
